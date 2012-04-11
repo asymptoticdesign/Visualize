@@ -1,0 +1,36 @@
+Title: pyInstrumentation
+Date Started: Jan 2012
+Last Modified: Feb 2012
+http://www.asymptoticdesign.org/
+This work is licensed under a Creative Commons 3.0 License.
+(Attribution - NonCommerical - ShareAlike)
+http://www.creativecommons.org/licenses/by-nc-sa/3.0/
+
+In summary, you are free to copy, distribute, edit, and remix the work.
+Under the conditions that you attribute the work to the author, it is for
+noncommercial purposes, and if you build upon this work or otherwise alter
+it, you may only distribute the resulting work under this license.
+
+Of course, these permissions may be waived with permission from the author.
+
+===Description===
+pyInstrumentation is an object-oriented library for connecting to serial, usb, and rs232 busses with python programs.  The code is meant to be written in an simplistic and straightforward way to help even non-programmers connect to their instrumentation for automated data analysis and acquisition.
+
+This project is similar to pyVISA, but my goal is to produce something that is simpler in complexity (though less powerful 'out of the box'), easyu to learn, and extremely customizable.
+
+===Dependencies===
+Python 2.6
+Numpy
+Scipy
+Matplotlib
+
+===List of Compatible Hardware===
+
+====Microcontrollers====
+Arduino UNO
+
+====Function Generators====
+Agilent 33210A
+
+====Oscilloscopes====
+Agilent DSOX2004A
