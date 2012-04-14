@@ -1,0 +1,21 @@
+import themidibus.*;
+
+MidiBus myBus;
+color controllerValue = 0;
+
+void setup() {
+  size(400,400);
+  background(0);
+  MidiBus.list();
+  myBus = new MidiBus(this, "nanoKONTROL2 [hw:2,0]", "nanoKONTROL2 [hw:2,0]");
+}
+
+void draw() {
+  fill(controllerValue, controllerValue, 0);      
+  ellipse(200,200,90,90);
+}
+
+void controllerChange(int channel, int number, int value) {
+  controllerValue = value;
+  println(number);
+} 
