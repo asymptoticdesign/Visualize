@@ -14,7 +14,7 @@ it, you may only distribute the resulting work under this license.
 Of course, these permissions may be waived with permission from the author.
 
 ===Description===
-Visualize is a music visualization template written in Processing.  The goal is leverage the accessibility of Processing to allow the easy development of intricate, music-reactive visuals.  The program currently uses Minim to do audio analysis and then outputs visuals that have parameters based off of the FFT spectrum.  It also utilizes themidibus (http://smallbutdigital.com/themidibus.php) to allow for the use of midi controllers to manually control visuals.  As is, Visualize serves as a low-cost VJ toolkit that can produce professional-quality visuals.
+Visualize is a music visualization template written in Processing.  The goal is leverage the accessibility of Processing to allow the easy development of intricate, music-reactive visuals.  The program currently uses Minim to do audio analysis and then outputs visuals that have parameters based off of the FFT spectrum.  It also utilizes themidibus to allow for the use of midi controllers to manually control visuals.  As is, Visualize serves as a low-cost VJ toolkit that can produce professional-quality visuals.
 
 Note that the framework here in under heavy construction; however, I thought it was better to get it out sooner than later for other people to play with while I clean up the code and try to make it more modular.
 
