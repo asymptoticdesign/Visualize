@@ -34,7 +34,7 @@ SpiralCircle spiralcircles;
 
 void setup() {
   //setup processing stuff
-  size(1024, 640);
+  size(1920, 1080);
   smooth();
   background(0);
   rectMode(CENTER);
