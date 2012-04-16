@@ -1,22 +1,15 @@
 class Hyperbolic {
   color strokeColor;
-  float sensitivity;
-  float bassFactor;
   
-  Hyperbolic(color strokeColorValue, float sensitivityValue){
+  Hyperbolic(color strokeColorValue){
     strokeColor = strokeColorValue;
-    sensitivity = sensitivityValue;
   }
   
-  void draw(FFT transform, float sensitivityValue, int fillVal){
-    fill(0, fillVal);
-    rect(width/2, height/2, width, height);
+  void draw(FourierAnalyzer _analyzer){
     noFill();
-    sensitivity = sensitivityValue;
-    int bassFactor = int(transform.specSize()/64);
-    for (int i = 0; i < fft.avgSize(); i++) {
-      stroke(fft.getAvg(bassFactor)*25, fft.getAvg(bassFactor)*25, fft.getAvg(bassFactor)*25 + 50);
-      ellipse(width/2,height/2,fft.getAvg(i)*fft.getAvg(i)/fft.getAvg(bassFactor)*sensitivity,fft.getAvg(bassFactor)*fft.getAvg(bassFactor)/fft.getAvg(i)*sensitivity);
+    for (int i = 0; i < _analyzer.numChannels; i++) {
+      stroke(_analyzer.bassValue*25, _analyzer.bassValue*25, _analyzer.bassValue*25 + 50);
+      ellipse(width/2,height/2,_analyzer.fftbins[i]*_analyzer.fftbins[i]/_analyzer.bassValue*_analyzer.gain,_analyzer.bassValue*_analyzer.bassValue/_analyzer.fftbins[i]*_analyzer.gain);
     }
   }
 }
