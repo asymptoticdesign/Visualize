@@ -17,7 +17,7 @@
 class FourierAnalyzer {
   FFT fourierTransform;
   float bassValue;
-  int numChannels,bassChannel;
+  int numChannels,1bassChannel;
   float[] fftbins;
   float gain = 1;
   AudioSource source;

@@ -31,14 +31,15 @@ DualCircles circ;
 Hyperbolic hyperbola;
 ConcLarge concentricLarge;
 SpiralCircle spiralcircles;
+long ts_prev=0, ts_current=0, count=0;
 
 void setup() {
   //setup processing stuff
-  size(1920, 1080);
+  size(1280, 640);
   smooth();
   background(0);
   rectMode(CENTER);
-
+  frameRate(30);
   //create a new Minim instance
   minim = new Minim(this);  
 
@@ -50,7 +51,7 @@ void setup() {
   fft = new FFT(input.bufferSize(), input.sampleRate());
   
   //set up the fourier analyzer with 64 channels
-  analyzer = new FourierAnalyzer(input, fft, 64, fft.specSize()/64);
+  analyzer = new FourierAnalyzer(input, fft, 32, fft.specSize()/32);
   //construct visualizers
   circ = new DualCircles(color(50, 50, 50));
   rectangle = new Rectangles(color(50,50,50));
@@ -60,6 +61,12 @@ void setup() {
 }
 
 void draw() {
+  ts_current = System.currentTimeMillis();
+  if(ts_prev + 1000 < ts_current) {
+      ts_prev = ts_current;
+      System.out.println("Frame Rate: " + count);
+      count = 0;
+  }
   //clear the screen -- slider0 determines the transparency/trails of the visuals
   fill(0, slider0);
   rect(width/2, height/2, width, height);
@@ -67,6 +74,7 @@ void draw() {
   analyzer.update();
   //Draw the visualizer
   visualize();
+  count++;
 }
 
 //stop function to cut out all of the sound, close minim, etc. when I close the window.
