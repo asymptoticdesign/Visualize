@@ -1,0 +1,22 @@
+Title: Visualize
+Date Started: Mar 2012
+Last Modified: Apr 2012
+http://asymptoticdesign.wordpress.com/
+This work is licensed under a Creative Commons 3.0 License.
+(Attribution - NonCommerical - ShareAlike)
+http://www.creativecommons.org/licenses/by-nc-sa/3.0/
+
+In summary, you are free to copy, distribute, edit, and remix the work.
+Under the conditions that you attribute the work to the author, it is for
+noncommercial purposes, and if you build upon this work or otherwise alter
+it, you may only distribute the resulting work under this license.
+
+Of course, these permissions may be waived with permission from the author.
+
+===Description===
+This is the test sketch for mapping a midi controller (courtesy of themidibus).  To use it:
+
+1. Plug your midi controller in
+2. Run this sketch.  Check the standard output (where you usually see error messages).  You should see your midi controller listed here.  If it is not obvious, try unplugging your midi controller and running it again to see what option disappears.
+3. Set the variables 'controllerIn' and 'controllerOut' to a string that matches the name of the midi controller EXACTLY as it appears in the standard output.
+4. Run the sketch again.  It should now be set to react to your midi controller.  Try pressing a button or pushing a slider.  Every time you use a button or slider, a message should get printed to standard output.  The 'number' is the number of the button/slider, and the 'value' is the value the button or slider is set to.  Use these to map parameters in your sketch!
