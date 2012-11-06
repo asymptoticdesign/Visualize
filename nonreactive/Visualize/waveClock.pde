@@ -1,3 +1,7 @@
+//Credit to Matt Pearson for Wave Clock:
+//http://abandonedart.org/?p=276
+//Used under Creative Commons BY-NC-SA License
+
 class waveClock {
 
 int _num = 10;    
