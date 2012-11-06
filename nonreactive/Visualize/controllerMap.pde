@@ -26,14 +26,14 @@ float visState0 = 1;
 //the rest start off
 float visState1, visState2, visState3, visState4, visState5, visState6, visState7;
 //the nanoKontrolII has 8 channels, each with a slider, a knob, and 3 buttons.  These variables map those sliders and knobs.
-int slider0 = 0;
-int slider1 = 1;
-int slider2 = 0;
-int slider3 = 0;
-int slider4 = 0;
-int slider5 = 0;
-int slider6 = 0;
-int slider7 = 0;
+int slider0 = 128;
+int slider1 = 128;
+int slider2 = 128;
+int slider3 = 128;
+int slider4 = 128;
+int slider5 = 128;
+int slider6 = 128;
+int slider7 = 128;
 int knob0, knob1, knob2, knob3, knob4, knob5, knob6, knob7;
 float buttonM1, buttonM2, buttonM3, buttonR3, buttonM4, buttonM5;
 
@@ -149,14 +149,10 @@ void keyPressed() {
       println(slider0);
     }
     if (keyCode == LEFT) {
-      knob0 += 10;
-      print("Fourier Gain: ");
-      println(knob0);
+      slider5 += 10;
     }
     if (keyCode == RIGHT) {
-      knob0 -= 10;
-      print("Fourier Gain: ");
-      println(knob0);
+      slider5 -= 10;
     }
   }
   //VISUALIZER SELECT
